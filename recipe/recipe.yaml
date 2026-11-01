@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.11.1"
+  version: "0.12.0"
 
 recipe:
   name: petsird
@@ -18,7 +18,7 @@ outputs:
       name: petsird
     source:
       - url: https://pypi.org/packages/source/p/petsird/petsird-${{ version }}.tar.gz
-        sha256: 77d3f0f1916cd4a45ae71ea327bd9fba29849f092ef9304dab0a336c4c2195c6
+        sha256: e9a3efacd9b3c3d28b2f2885fe51c55d8a9f9a97a52a4164ae05f74a334609e0
     build:
       noarch: python
       skip:
@@ -47,11 +47,11 @@ outputs:
       - if: target_platform == "linux-64"
         then:
           url: https://github.com/ETSInitiative/PETSIRD/releases/download/v${{ version }}/petsird_v${{ version }}_linux_x86_64.tar.gz
-          sha256: e647b0603adfafcb55815d9a72610141fbdafca877bd30db9b69a22a2f55e07a
+          sha256: b5d0b4a99a060fa3fe59a561abb720ee5c2ac504c2996c60ea0c330099b61eab
       - if: target_platform == "osx-arm64"
         then:
           url: https://github.com/ETSInitiative/PETSIRD/releases/download/v${{ version }}/petsird_v${{ version }}_darwin_arm64.tar.gz
-          sha256: 23c584e3ed2b015bf9ad3c0cf9e19a23b2d0dfb2fcd2c55a1e4c5f15476754b3
+          sha256: 3221c84a2dfc58bef6929f68d0baa4fb211ce36911c108257f2c761ce63c91a5
     build:
       script: cp -R include lib $PREFIX
       files:
