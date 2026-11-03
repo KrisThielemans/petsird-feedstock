@@ -64,7 +64,7 @@ outputs:
         - ${{ stdlib('c') }}
         - ${{ compiler('cxx') }}
       host:
-        - hdf5>=1.12.1
+        - hdf5
         - howardhinnant_date>=3.0.1
         - nlohmann_json>=3.11.2
         - xtensor>=0.24.2
